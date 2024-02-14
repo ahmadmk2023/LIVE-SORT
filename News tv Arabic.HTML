@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Glowing Buttons on Hover || Learningrobo</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<body>
+
+    <!----------  اكواد استايل القائمة  ------------>
+    <style>
+         body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        
+        }
+
+        .topnav {
+          position: fixed;
+overflow: hidden;
+border-radius:4px;
+    background-image: linear-gradient(132deg, #3c4a71 0%, #339a8a 100%);
+top: 0;
+height: 48px;
+width: 100%;
+box-shadow: 5px 5px 7px #fff;
+z-index: 1;
+}  
+
+        .topnav a {
+            float: left;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+       
+ 
+   /* إضافة تأثير تغيير لون الخلفية عند تحديد الزر */
+        .topnav a:focus {
+            background-color: red; /* يمكنك تغيير اللون إلى أي لون تفضله */
+            color: #fff; /* تغيير لون النص إلى اللون المناسب للخلفية */
+            outline: none; /* إزالة تأثير الـ focus الافتراضي */
+        }
+
+        /* للتأكد من أن الزر يمكن الوصول إليه عند التحكم بجهاز التحكم عن بُعد */
+        .topnav a:hover {
+            background-color: yellow; /* يمكنك تغيير اللون إلى أي لون تفضله */
+            color: #000; /* تغيير لون النص إلى اللون المناسب للخلفية */
+        }
+
+        .topnav-centered a {
+
+            float: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .topnav-right {
+            float: right;
+        }
+
+        /* Responsive navigation menu (for mobile devices) */
+        @media screen and (max-width: 100%) {
+            .topnav a,
+            .topnav-right {
+                float: none;
+                display: block;
+            }
+
+            .topnav-centered a {
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: none;
+                color: #ffff;
+            }
+        }
+    </style>
+    <head>
+
+        <body>
+
+    
+
+            <!-- lçaima l3lwia and-->
+            
+            <html>
+<head>
+    
+    <style>
+   body {
+                height: 100%;
+                margin: auto;
+                position: relative;
+    background-image: linear-gradient(132deg, #3c4a71 0%, #339a8a 100%);
+             background-position: center;
+                align-items: center;
+                justify-content: center;z-index: 2;
+            }
+
+           button {
+                 position: relative;
+                align:center;
+                height: 165px;
+                width: 160px;
+                margin: 5px;
+              border-color: #000;
+                outline: none;
+                font-size: 14px;
+                color: black;
+                font-weight: bold  ;
+                background: #ffffff;
+                cursor: pointer;
+                border-radius: 8px;
+                font-family: 'Raleway', sans-serif;
+            }
+
+ 
+
+         button img {
+          margin-top: 0px;
+                align:center;
+                height: 60px;
+                width: 140px;
+                border-radius: 8px;
+                vspace: 5px;
+                margin-top: -1px;
+            }
+        
+        #remot:focus {
+            background-color: red; /* يمكنك تغيير اللون إلى أي لون تفضله */
+            color: #fff; /* تغيير لون النص إلى اللون المناسب للخلفية */
+            outline: none; /* إزالة تأثير الـ focus الافتراضي */
+            transform: translateY(-8px) scale(1.2); /* ترفع الايقونة وتزيد من حجمها */
+        }
+
+        /* للتأكد من أن الزر يمكن الوصول إليه عند التحكم بجهاز التحكم عن بُعد */
+        .number:hover {
+            background-color: yellow; /* يمكنك تغيير اللون إلى أي لون تفضله */
+            color: #000; /* تغيير لون النص إلى اللون المناسب للخلفية */
+            transform: translateY(-8px) scale(1.2); /* ترفع الايقونة وتزيد من حجمها */
+        }
+            /* .ازالة شريط التمرير اسفل المدونة*/
+            html {
+                overflow-x: hidden;
+            }
+
+            /* ازالة تغيير شكل السكرول بار Scroll.Bar */
+            ::-webkit-scrollbar {
+                width: 7px;
+                /**  تغير  لون القائمة **/
+            }
+
+            ::-webkit-scrollbar-thumb {
+                -webkit-shadow: inset 0 0 0 #000000;
+                -webkit-border-radius: 0;
+                background-image: -webkit-linear-gradient(top, #bc1115 100%, #000 100%);
+            }
+
+            ::-webkit-scrollbar-track {
+                -webkit-shadow: inset 0 0 0 #000000;
+                -webkit-border-radius: 100px;
+            }
+
+lkhat1 {
+
+        text-align: center;
+        font-size: 16px;
+       color: black;
+         font-weight: bold  ;
+      margin: -1px;
+      
+        }
+        
+    .khlfia {
+    align:center;
+    text-align: center;
+    background: #88c999 ;
+    width: auto;
+    height: 21px;
+    border-radius: 8px;
+   border:1px solid #000;
+    margin: 2px;
+     
+        }    
+       
+lkhat {
+align:center;
+      text-align: center;
+      font-size: 14px;
+         font-weight: bold  ;
+      color: black;
+      margin : 2px;
+      
+        }
+      .number-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: -1px;
+          
+        }
+
+        .number {
+        
+            width: 35px;
+            height: 30px;
+            background:#d53369;
+            border-radius: 50%;
+             border:2px solid #000;
+            color: #000;
+         font-size: 14px;
+         font-weight: bold  ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+             
+             #page {
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+          a{
+color: black;
+text-decoration:none;
+}
+#al{
+color: yellow;
+text-decoration:none;
+
+}
+                #page {
+            margin-top: 55px;
+            width: 100%;
+        }
+                </style>
+                
+                
+          <!-- Top navigation -->
+            <div class="topnav">
+                <!-- ISIM TATBI9 -->
+                <div class="topnav-centered">
+                    <a>
+                        <h5>News tv Arabic  </h5>
+                    </a>
+                </div>
+                <!-- ISIM TATBI9 -->
+
+                <!-- ZIR ROJO3 -->
+                <a href="go:1 ">
+                    <i id="i1" class="fa fa-reply fa-beat" style="font-size: 20px; margin-top: 2px; "></i>
+                </a>
+                <!-- ZIR ROJO3 -->
+
+<img src="https://uxwing.com/wp-content/themes/uxwing/download/seo-marketing/latest-news-icon.png"style="width: 24px;
+    height: 30px; margin-top: 10px;" alt="beIN MAX">
+                <!-- ZIR LBAHT-search -->
+                <div class="topnav-right">
+                    <a href="http://action_search/"><i class="fa fa-search fa-beat" style="font-size: 20px;"></i></a>
+                    <!-- ZIR LBAHT-search -->
+
+                </div>
+
+            </div>              
+                
+</head>
+<body>
+<div align="center" >
+<div id="buttons-list">	
+<div class="container">
+<div id="page">
+
+                                      <!-- tv 1 -->
+         
+    <button class="button"><img src="https://i.imgur.com/DPgGbNK.png" alt="beIN MAX"><div>Jazeera News</div>
+    
+   <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">   
+                                            
+ <a  href="intent://aHR0cHM6Ly9saXZlLWhscy12My1hamEuZ2V0YWoubmV0L0FKQS1WMy9pbmRleC5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end " onclick="checkAppInstallation()"><div id="remot" tabindex="1" class="number" tabindex="1" >1</div></a>
+
+ <a  href="intent://aHR0cHM6Ly9saXZlLWhscy13ZWItYWphLmdldGFqLm5ldC9BSkEvMDEubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end " onclick="checkAppInstallation()"><div id="remot" tabindex="1" class="number" tabindex="1" >2</div></a>
+
+                                        
+ <a  href="intent://aHR0cHM6Ly9saXZlLWhscy12My1hamEuZ2V0YWoubmV0L0FKQS1WMy9pbmRleC5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end " onclick="checkAppInstallation()"><div id="remot" tabindex="1" class="number" tabindex="1" >3</div></a>
+
+    </div ></button>  
+    
+    
+                 <!-- tv 2 -->
+      <button class="button"><img src="https://i.imgur.com/xykLbMe.png" alt="beIN MAX"><div>Jazeera mubasher</div> 
+           <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                     <a href="intent://aHR0cHM6Ly9saXZlLWhscy13ZWItYWptLmdldGFqLm5ldC9BSk0vaW5kZXgubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >1</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly9saXZlLWhscy13ZWItYWptLmdldGFqLm5ldC9BSk0vMDEubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >2</div></a> 
+                                              
+                                                   <a href="intent://aHR0cHM6Ly9saXZlLWhscy13ZWItYWptLmdldGFqLm5ldC9BSk0vMDEubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >3</div></a>                                          
+    </div ></button>
+    
+           <!-- tv 3 -->
+      <button class="button"><img src="https://i.imgur.com/tZLEHMV.png" alt="beIN MAX"><div> arabiya News </div> 
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent:/aHR0cHM6Ly9saXZlLmFsYXJhYml5YS5uZXQvYWxhcmFiaWFwdWJsaXNoL2FsYXJhYml5YS5zbWls
+L3BsYXlsaXN0Lm0zdTg=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >1</div></a>
+                                        <a href="intent://aHR0cHM6Ly9saXZlLmFsYXJhYml5YS5uZXQvYWxhcmFiaWFwdWJsaXNoL2FsYXJhYml5YS5zbWls
+L2FsYXJhYmlhcHVibGlzaC9hbGFyYWJpeWFfMTA4MHAvY2h1bmtzLm0zdTg=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >2</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly9saXZlLmFsYXJhYml5YS5uZXQvYWxhcmFiaWFwdWJsaXNoL2FsYXJhYml5YS5zbWls
+L2FsYXJhYmlhcHVibGlzaC9hbGFyYWJpeWFfNzIwcC9jaHVua3MubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >3</div></a> 
+                                   
+     </div> </button> 
+      
+      
+                 <!-- tv 4 -->
+<button class="button"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/AlHADATH.png" alt="beIN MAX">
+                    <div>alhadath News</div>
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent://aHR0cHM6Ly9zaGxzLWhhZGF0aC1wcm9kLWR1Yi5zaGFoaWQubmV0L291dC92MS8wZTFhMzA2Mzk5
+YzM0NmZhYWM0MjI2YWEwODU4Zjk5Yi9pbmRleC5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >1</div></a>
+                                        <a href="intent://aHR0cHM6Ly9zaGxzLWhhZGF0aC1wcm9kLWR1Yi5zaGFoaWQubmV0L291dC92MS8wZTFhMzA2Mzk5
+YzM0NmZhYWM0MjI2YWEwODU4Zjk5Yi9pbmRleF8xLm0zdTg=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >2</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly9zaGxzLWhhZGF0aC1wcm9kLWR1Yi5zaGFoaWQubmV0L291dC92MS8wZTFhMzA2Mzk5
+YzM0NmZhYWM0MjI2YWEwODU4Zjk5Yi9pbmRleF8yLm0zdTg=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >3</div></a> 
+
+</div></button> 
+
+        
+           <!-- tv 5 -->
+                     
+<button class="button"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/France24.png/635px-France24.png" alt="beIN MAX">          <div>France 24 AR</div>
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent://aHR0cHM6Ly95dGhscy5hcm1lbGluLm9uZS9jaGFubmVsL1VDZFR5dVhnbUprR19POF83NWVxZWot
+dy5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >1</div></a>
+                                        <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay9h
+cnJhYmlhYS9obHNfc25ydC9pbmRleC5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >2</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay9h
+cnJhYmlhYS9obHNfc25ydC9hcnJhYmlhYS1hdmMxXzE1MDAwMDA9NC1tcDRhXzEzMDQwMF9xYWQ9
+MS5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >3</div></a> 
+                                              
+                                                   <a href="https://www.youtube.com/embed/VuYzy8IuT0Y?si=YC7I8y2uDi_aEemd"><div id="remot" tabindex="1" class="number" >4</div></a>
+</div></button> 
+
+    <!-- tv 6 -->
+        
+        <button class="button"><img src="https://i.imgur.com/J6dTDiH.jpg" alt="beIN MAX">
+        <div>Maghribia 5</div>
+
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay9h
+bF9tYWdocmliaWFfc25ydC9obHNfc25ydC9hbF9tYWdocmliaWFfc25ydC5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >1</div></a>
+                                        <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay9h
+bF9tYWdocmliaWFfc25ydC9obHNfc25ydC9pbmRleC5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >2</div></a>
+                                        
+ <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay9h
+bF9tYWdocmliaWFfc25ydC9obHNfc25ydC9hbF9tYWdocmliaWFfc25ydC1hdmMxXzE1MDAwMDA9
+NC1tcDRhXzEzMDQwMF9xYWQ9MS5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a> 
+                                              
+                                                   <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay9h
+bF9tYWdocmliaWFfc25ydC9obHNfc25ydC9hbF9tYWdocmliaWFfc25ydC1hdmMxXzE1MDAwMDA9
+Mi1tcDRhXzEzMDQwMF9xYWQ9MS5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >SD</div></a>
+</div></button> 
+
+    <!-- tv 7 -->
+ 
+               <button class="button"><img src="https://i.imgur.com/sRbquSD.png" alt="beIN MAX">
+               
+                        <div>MBC 5 ᴴᴰ</div>
+
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent://aHR0cHM6Ly9zaGxzLW1hc3IyLWFrLmFrYW1haXplZC5uZXQvb3V0L3YxLzI3MjA1NjRiNmE0NjQx
+NjU4ZmRmYjY4ODRiMTYwZGEyL2luZGV4Lm0zdTg=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >4K</div></a>
+                                        <a href="intent://aHR0cHM6Ly9zaGxzLW1hc3IyLWFrLmFrYW1haXplZC5uZXQvb3V0L3YxLzI3MjA1NjRiNmE0NjQx
+NjU4ZmRmYjY4ODRiMTYwZGEyL2luZGV4XzEubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >FHD</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly9zaGxzLW1hc3IyLWFrLmFrYW1haXplZC5uZXQvb3V0L3YxLzI3MjA1NjRiNmE0NjQx
+NjU4ZmRmYjY4ODRiMTYwZGEyL2luZGV4XzEubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a> 
+                                              
+                                                   <a href="intent://aHR0cHM6Ly9zaGxzLW1hc3IyLWFrLmFrYW1haXplZC5uZXQvb3V0L3YxLzI3MjA1NjRiNmE0NjQx
+NjU4ZmRmYjY4ODRiMTYwZGEyL2luZGV4XzEubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >SD</div></a>
+</div></button> 
+   <!-- tv 8 -->
+               <button class="button"><img src="https://i.imgur.com/XpWBOhq.jpg" alt="beIN MAX">
+               
+                        <div>Assadissa 6</div>
+
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay9h
+c3NhZGlzc2EvaGxzX3NucnQvYXNzYWRpc3NhLm0zdTg=#Intent;scheme=xmtv;package=co.wuffy.player;end"><div id="remot" tabindex="1" class="number" >1</div></a>
+                                        <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay9h
+c3NhZGlzc2EvaGxzX3NucnQvaW5kZXgubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >2</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay9h
+c3NhZGlzc2EvaGxzX3NucnQvYXNzYWRpc3NhLWF2YzFfNDAwMDAwPTQtbXA0YV8xMzA0MDBfcWFk
+PTEubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a> 
+                                              
+                                                   <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay9h
+c3NhZGlzc2EvaGxzX3NucnQvYXNzYWRpc3NhLWF2YzFfNDAwMDAwPTItbXA0YV8xMzA0MDBfcWFk
+PTEubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >SD</div></a>
+</div></button> 
+     <!-- tv 8 -->
+               <button class="button"><img src="https://i.imgur.com/KA6C5Kh.png" alt="beIN MAX">
+               
+                        <div>flam 7 </div>
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="https://rtsp.me/embed/st5E62e9/?time=1699560612"><div id="remot" tabindex="1" class="number" >1</div></a>
+                                        <a href="https://www.elahmad.com/tv/mobiletv/glarb.php?id=aflam_maroc "><div id="remot" tabindex="1" class="number" >2</div></a>
+                                        
+                                              <a href="intent://aHR0cDovL3VnZWVuLmxpdmU6ODA4MC9VZ2Vlbl9WSVBEWkJmZ3ovYm5XWjIzLzQzNDk=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a> 
+                                              
+                                                   <a href="intent://aHR0cDovL3VnZWVuLmxpdmU6ODA4MC9VZ2Vlbl9WSVBEWkJmZ3ovYm5XWjIzLzQzNTM=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >SD</div></a>
+</div></button> 
+  
+     <!-- tv 9 -->
+     
+                    <button class="button"><img src="https://i.imgur.com/DNAmiQJ.jpg" alt="beIN MAX">
+                        <div>Tamazight 8</div>
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay90
+YW1hemlnaHRfdHY4X3NucnQvaGxzX3NucnQvdGFtYXppZ2h0X3R2OF9zbnJ0Lm0zdTg=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >1</div></a>
+                                        <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay90
+YW1hemlnaHRfdHY4X3NucnQvaGxzX3NucnQvaW5kZXgubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >2</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay90
+YW1hemlnaHRfdHY4X3NucnQvaGxzX3NucnQvdGFtYXppZ2h0X3R2OF9zbnJ0LWF2YzFfMTUwMDAw
+MD00LW1wNGFfMTMwNDAwX3FhZD0xLm0zdTg=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a> 
+                                              
+                                                   <a href="intent://aHR0cHM6Ly9jZG5hbWQtaGxzLWdsb2JlY2FzdC5ha2FtYWl6ZWQubmV0L2xpdmUvcmFtZGlzay90
+YW1hemlnaHRfdHY4X3NucnQvaGxzX3NucnQvdGFtYXppZ2h0X3R2OF9zbnJ0LWF2YzFfNDAwMDAw
+PTItbXA0YV8xMzA0MDBfcWFkPTEubTN1OAo=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >SD</div></a>
+</div></button> 
+     
+
+ <!-- tv 10 -->
+     
+                    <button class="button"><img src="https://i.imgur.com/9MWbts9.png" alt="beIN MAX">
+                           <div>MEDI1TV Maghreb</div>
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent://aHR0cHM6Ly9zdHJlYW1pbmcxLm1lZGkxdHYuY29tL2xpdmUvc21pbDptZWRpMXR2LnNtaWwvcGxh
+eWxpc3QubTN1OD9EVlI=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >FHD</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly9zdHJlYW1pbmcxLm1lZGkxdHYuY29tL2xpdmUvc21pbDptZWRpMXR2LnNtaWwvcGxh
+eWxpc3QubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a> 
+                                              
+                                                   <a href="intent://aHR0cHM6Ly9zdHJlYW1pbmcxLm1lZGkxdHYuY29tL2xpdmUvc21pbDptZWRpMXR2LnNtaWwvY2h1
+bmtsaXN0X3cxMjQxODgyOTg4X2I5NzgwMDBfRFZSX3NsYXIubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a>
+</div></button> 
+     
+
+                   <button class="button"><img src="https://i.imgur.com/hdSU5jM.png" alt="beIN MAX">
+                           <div>MEDI1TV Arabic</div>
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent://aHR0cHM6Ly9zdHJlYW1pbmcxLm1lZGkxdHYuY29tL2xpdmUvc21pbDptZWRpMWFyLnNtaWwvcGxh
+eWxpc3QubTN1OD9EVlI=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >FHD</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly9zdHJlYW1pbmcxLm1lZGkxdHYuY29tL2xpdmUvc21pbDptZWRpMXR2LnNtaWwvY2h1
+bmtsaXN0X3c3ODA0OTgzNDVfYjk3ODAwMF9EVlJfc2xhci5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a> 
+                                              
+                                                   <a href="intent://aHR0cDovLzVmNzJmM2E5YjA2Yjcuc3RyZWFtbG9jay5uZXQvbGl2ZS9zbWlsOm1lZGkxYXIuc21p
+bC9wbGF5bGlzdC5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a>
+</div></button> 
+     
+
+ <button class="button"><img src="https://i.imgur.com/co4gEtH.png" alt="beIN MAX">
+                           <div>MEDI1TV Afrique</div>
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent://aHR0cHM6Ly9zdHJlYW1pbmcxLm1lZGkxdHYuY29tL2xpdmUvc21pbDptZWRpMWZyLnNtaWwvcGxh
+eWxpc3QubTN1OD9EVlI=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >FHD</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly9zdHJlYW1pbmcxLm1lZGkxdHYuY29tL2xpdmUvc21pbDptZWRpMWZyLnNtaWwvY2h1
+bmtsaXN0X3cxNzMzOTAzNzg1X2I5NzgwMDBfRFZSX3NsYXIubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a> 
+                                              
+                                                   <a href="intent://aHR0cDovL3N0cmVhbWluZzIubWVkaTF0di5jb20vbGl2ZS9zbWlsOm1lZGkxZnIuc21pbC9wbGF5
+bGlzdC5tM3U4#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a>
+</div></button> 
+     
+ <button class="button"><img src="https://i.imgur.com/isU2Y6S.png" alt="beIN MAX">
+                           <div>Télé Maroc</div>
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent://aHR0cHM6Ly9hcGkubmV3LmxpdmVzdHJlYW0uY29tL2FjY291bnRzLzI3MTMwMjQ3L2V2ZW50cy85
+MTk3MDk2L2xpdmUubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >FHD</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly9hcGkubmV3LmxpdmVzdHJlYW0uY29tL2FjY291bnRzLzI3MTMwMjQ3L2V2ZW50cy85
+MTk3MDk2L2xpdmUubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a> 
+                                              
+                                                   <a href="https://livestream.com/accounts/27130247/events/9197096/player?enableInfoAndActivity=true&autoPlay=true&mute=false"><div id="remot" tabindex="1" class="number" >WEB</div></a>
+</div></button> 
+
+
+ <button class="button"><img src="https://i.imgur.com/hMQEewO.png" alt="beIN MAX">
+                           <div>Chada TV</div>
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent://aHR0cHM6Ly9jaGFkYXR2LnZlZGdlLmluZm9tYW5pYWsuY29tL2xpdmVjYXN0L2NoYWRhdHYvcGxh
+eWxpc3QubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >FHD</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly9jaGFkYXR2LnZlZGdlLmluZm9tYW5pYWsuY29tL2xpdmVjYXN0L2NoYWRhdHYvcGxh
+eWxpc3QubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a> 
+                                              
+                                                   <a href="intent://aHR0cHM6Ly9jaGFkYXR2LnZlZGdlLmluZm9tYW5pYWsuY29tL2xpdmVjYXN0L2NoYWRhdHYvcGxh
+eWxpc3QubTN1OA==#Intent;scheme=xmtv;package=co.wuffy.player;end"><div id="remot" tabindex="1" class="number" >HD</div></a>
+</div></button> 
+
+ <button class="button"><img src="https://i.imgur.com/IMQaeKe.jpg" alt="beIN MAX">
+                           <div>M24 TV</div>
+         <div class="khlfia"> <lkhat  > سيرفرات المشاهدة</lkhat></div> 
+                        <!-- إضافة شكل الأرقام الدائرية -->
+                        <div class="number-container">  
+                            <a href="intent://aHR0cHM6Ly82M2RmMzE5MTQ2M2NlLnN0cmVhbWxvY2submV0L2xpdmUvbmdycDpMaXZlMi5zdHJl
+YW1fYWxsL2luZGV4Lm0zdTg=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >FHD</div></a>
+                                        
+                                              <a href="intent://aHR0cHM6Ly82M2RmMzE5MTQ2M2NlLnN0cmVhbWxvY2submV0L2xpdmUvbmdycDpMaXZlMi5zdHJl
+YW1fYWxsL2luZGV4Lm0zdTg=#Intent;scheme=xmtv;package=co.wuffy.player;end "><div id="remot" tabindex="1" class="number" >HD</div></a> 
+                                              
+                                                   <a href="intent://aHR0cHM6Ly82M2RmMzE5MTQ2M2NlLnN0cmVhbWxvY2submV0L2xpdmUvbmdycDpMaXZlMi5zdHJl
+YW1fYWxsL2luZGV4Lm0zdTg=#Intent;scheme=xmtv;package=co.wuffy.player;end"><div id="remot" tabindex="1" class="number" >HD</div></a>
+</div></button>
+         </div> 
+         </div>
+        
+        </div>
+    </div>
+</body>
+</html>
+
+
+
